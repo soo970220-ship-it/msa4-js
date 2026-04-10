@@ -37,7 +37,7 @@ console.log(arr.indexOf("둘리")); // 1 반환
 console.log(arr.indexOf("도우너")); // 2 반환
 console.log(arr.indexOf("또치")); // -1 반환
 
-// Array.push(...args): number ** 원본 변경 **
+//★ Array.push(...args): number ** 원본 변경 **
 //  원본 배열에 마지막 요소를 추가하고, 변경된 length를 반환
 arr = [1, 2, 3];
 let arr2 = [...arr];
@@ -50,19 +50,19 @@ arr = [1, 2, 3];
 resultArr = arr.concat(4, 5, 6);
 console.log(arr, resultArr);
 
-// Array.pop(): T | undefind ** 원본 변경 **
+// ★Array.pop(): T | undefind ** 원본 변경 **
 // 원본 배열의 마지막 요소를 제거하고, 제거된 요소를 반환
 arr = [1, 2, 3];
 resultArr = arr.pop();
 console.log(arr, resultArr);
 
-// Array.unshift(...args): number ** 원본 변경 **
+// ★Array.unshift(...args): number ** 원본 변경 **
 //  원본 배열의 첫번째 요소를 추가하고, 변경된 length를 반환
 arr = [1, 2, 3];
 resultArr = arr.unshift(100, 200, 300);
 console.log(arr, resultArr);
 
-// Array.shift(): T | underfined ** 원본 변경 **
+// ★Array.shift(): T | underfined ** 원본 변경 **
 //  원본 배열의 첫번째 요소를 제거하고, 해당 요소를 반환
 arr = [10, 2, 3];
 resultArr = arr.shift();
@@ -110,7 +110,7 @@ arr = [6, 4, 7, 1, 11];
 resultArr = arr.sort((a, b) => a - b);
 console.log(arr, resultArr);
 
-// Array.map(callback): T[]
+// ★Array.map(callback): T[]
 //  배열의 모든 요소에 대해 콜백 함수를 반복 실행한 후,
 //  콜백 함수의 리턴 값들을 모아서 새로운 배열을 반환
 arr = [1, 2, 3, 4, 5, 6];
