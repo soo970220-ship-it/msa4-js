@@ -1,0 +1,9 @@
+#hidden {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  top: 200px; /* 찾기 쉽게 위치 고정 */
+  left: 200px;
+  display: none; /* 처음엔 아예 없음 */
+}
