@@ -2,7 +2,7 @@ const url = "https://picsum.photos/v2/list?page=2&limit=10";
 
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
-    e.preventDefault();
+    e.preventDefault(); //기존 이벤트 취소
 
     const baseUrl = "https://picsum.photos/v2/list";
     const page = document.querySelector("#page").Value;

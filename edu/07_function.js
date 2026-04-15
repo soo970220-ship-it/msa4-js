@@ -52,3 +52,6 @@ function test() {
 }
 
 callBackTest(true, test);
+
+// 인수  함수를 호출할때 실제로 건내주는 값
+// 인자 함수정의부에서 외부로 부터 입력값을 받기위해 선언된 변수
