@@ -25,12 +25,17 @@ let isAlerted = false; // 변수를 만들기 위해 let 필요
 
 // [1번] 시작 버튼
 function button() {
-  alert("안녕하세요.\n숨어있는 div를 찾아주세요.");
+  // 힘수 선언식
+  alert("안녕하세요.\n숨어있는 \'div\'를 찾아주세요.");
   const target = document.querySelector("#hidden");
   target.style.display = "block";
   target.style.opacity = "0"; // 시작할 땐 무조건 "0"
   isAlerted = false; // 다시 시작할 때 초기화
 }
+// const btnInfo = document.querySelector('butten');
+// btnInfo.addEventListener('click',()=>{
+//   alert('안녕하세요.\n숨어있는 \'div\'를 찾아주세요.');
+// });
 
 // [2번] 마우스 진입 (두근두근)
 document.querySelector("#hidden").addEventListener("mouseenter", function () {
@@ -43,15 +48,27 @@ document.querySelector("#hidden").addEventListener("mouseenter", function () {
   }
 });
 
+// const box=document.querySelector('.box');
+// box.addEventListener('mouseenter', ()=>{
+//   alert('두근두근')
+// })
+
 // [문제 3&5 통합] 클릭했을 때
 document.querySelector("#hidden").addEventListener("click", function () {
   const target = document.querySelector("#hidden");
+
+  // box.addEventListener("click", () => {
+  //   box.classList.add("busted");
+  //   alert("들켰다.");
+  // });
 
   // A. 숨어있는 상태에서 클릭했을 때 (들켰다!)
   if (target.style.opacity === "0" || isAlerted === true) {
     alert("들켰다!");
     target.style.opacity = "0.5"; // 이제 박스가 보임
     isAlerted = false; // 다음 게임을 위해 알러트 상태 초기화
+
+    // box.removeEventListener('click,busted') ; 들켰다 클릭 이벤트 제거하는법
   }
   // B. 이미 들킨 상태(opacity: 1)에서 또 클릭했을 때 (다시 시작!)
   else {
